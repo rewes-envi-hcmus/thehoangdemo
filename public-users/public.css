@@ -1,0 +1,129 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: url(./image/1.png);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header header""main main main main";
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-rows: auto;
+    background: rgb(68, 68, 75);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "logo1 noidung noidung noidung logo2";
+}
+
+.logo1 {
+    grid-area: logo1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.logo2 {
+    /* background: lime; */
+    grid-area: logo2;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.noidung {
+    grid-area: noidung;
+    text-align: center;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0;
+    color: #fff;
+}
+
+.main {
+    margin-top: 15px;
+    display: grid;
+    grid-area: main;
+    grid-template-rows: 500px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "hienthi bieudo";
+
+    grid-column-gap: 15px;
+}
+
+.card1 {
+    grid-area: thoigian;
+}
+
+.suatlieu {
+    grid-area: suatlieu;
+}
+
+.nhietdo {
+    grid-area: nhietdo;
+}
+
+.doam {
+    grid-area: doam;
+}
+
+.bui {
+    grid-area: bui;
+}
+
+.co {
+    grid-area: co;
+}
+
+.ch4 {
+    grid-area: ch4;
+}
+
+.main .hienthi {
+    background: rgb(15, 15, 15);
+    grid-area: hienthi;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "thoigian thoigian thoigian""suatlieu nhietdo doam""bui co ch4";
+}
+
+.main .hienthi .card {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+    border-radius: 7px;
+    height: 100px;
+    width: auto;
+    margin: 20px;
+    color: ivory;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.thoigian1 {
+    color: ivory;
+    text-align: center;
+    line-height: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+.main .bieudo {
+    background: rgb(15, 15, 15);
+    grid-area: bieudo;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.main .bieudo .text1 {
+    color: ivory;
+}
+
+.main .text {
+    font-size: 18px;
+}
