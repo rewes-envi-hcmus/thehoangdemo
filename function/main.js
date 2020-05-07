@@ -168,7 +168,7 @@ $(document).ready(function () {
     var x = 0;
     setInterval(function () {
         getData().then(function (data) {
-            var response = JSON.parse(data);
+            var response = data;
             x += 1;
             var label = new Date().toLocaleTimeString('vi-VN');
             updateStatic(new Date(), (response.dose).toFixed(4), (response.Te).toFixed(4), (response.Hu).toFixed(4), (response.sen1).toFixed(4), (response.sen2).toFixed(4), (response.sen3).toFixed(4));
