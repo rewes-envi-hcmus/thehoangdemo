@@ -104,6 +104,14 @@ body {
     line-height: 40px;
 }
 
+.main .hienthi .card .texttime {
+    font-size: 30px;
+}
+
+.main .hienthi .card .text {
+    margin: 10px 0 0 0;
+}
+
 .thoigian1 {
     color: ivory;
     text-align: center;
@@ -126,4 +134,21 @@ body {
 
 .main .text {
     font-size: 18px;
+}
+
+.main .bieudo .groupbtn {
+    margin: 50px 0 0 0;
+}
+
+.main .bieudo h3 {
+    color: ivory;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#chart1 {
+    margin: 30px auto;
+    height: 300px;
+    width: 90%;
+
 }

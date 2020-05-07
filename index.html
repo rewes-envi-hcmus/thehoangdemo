@@ -7,16 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Public Users</title>
     <link rel="stylesheet" href="public.css">
-    <link rel="stylesheet" href="trangchu.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <!-- <script src="./function/canvasjs.min.js"></script> -->
+    <script src="../../chart/chart/canvasjs.min.js"></script>
 
+    <link rel="stylesheet" href="trangchu.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
-    <script src="./function/function.js"></script>
-    <script src="./function/main.js"></script>
+    <script src="../function/function.js"></script>
+    <script src="../../chart/chart/main.js"></script>
 
 </head>
 
@@ -25,7 +25,7 @@
         <div class="logo1">
             <img src="./image/logoDuAn.png" sizes="80px">
         </div>
-        <div class="noidung">QUAN TRẮC MÔI TRƯỜNG THEO THỜI GIAN </div>
+        <div class="noidung">QUAN TRẮC MÔI TRƯỜNG THEO THỜI GIAN THỰC</div>
         <div class="logo2">
             <img src="./image/logoTruong.png">
             <img src="">
@@ -36,37 +36,37 @@
         <div class="hienthi">
             <div class="card card1">
                 <div class="thoigian1">
-                    <div class="text">Thời gian thực:</div>
+                    <div class="text texttime">THỜI GIAN THỰC:</div>
                     <div id="realtime1"></div>
                 </div>
             </div>
             <div class="card suatlieu">
                 <div class="suatlieu1">
-                    <div class="text">Suất liều</div>
+                    <div class="text">SUẤT LIỀU</div>
                     <div id="sensor1"></div>
                 </div>
             </div>
             <div class="card nhietdo">
                 <div class="nhietdo1">
-                    <div class="text">Nhiệt độ</div>
+                    <div class="text">NHIỆT ĐỘ</div>
                     <div id="sensor2"></div>
                 </div>
             </div>
             <div class="card doam">
                 <div class="doam1">
-                    <div class="text">Độ ẩm</div>
+                    <div class="text">ĐỘ ẨM</div>
                     <div id="sensor3"></div>
                 </div>
             </div>
             <div class="card bui">
                 <div class="bui1">
-                    <div class="text">Bụi mịn</div>
+                    <div class="text">BỤI MỊN</div>
                     <div id="sensor4"></div>
                 </div>
             </div>
             <div class="card co">
                 <div class="co1">
-                    <div class="text">Khí CO</div>
+                    <div class="text">KHÍ CO</div>
                     <div id="sensor5"></div>
                 </div>
             </div>
@@ -79,9 +79,9 @@
 
         </div>
         <div class="bieudo">
-            <h3 style="text-align: center; color: red;">Đồ thị theo thời gian thực:</h3>
-            <div id="chart1" style="height: 300px; width: 90%; margin: 0 auto;"></div>
-            <div style="text-align: center">
+            <h3>Đồ thị theo thời gian thực:</h3>
+            <div id="chart1"></div>
+            <div class="groupbtn" style="text-align: center">
                 <button id="btn_phong_xa" class="btn btn-primary-spacing active" href="#">Suất liều</button>
                 <button id="btn_nhiet_do" class="btn" href="#">Nhiệt độ</button>
                 <button id="btn_do_am" class="btn" href="#">Độ ẩm</button>
@@ -102,19 +102,21 @@
                 <li><a href="#">Điều khiển</a></li>
             </ul>
 
+            <div class="tog">
+                <h2>Đăng nhập </h2>
+                <form id="inputbox" action="">
+                    <div class="inputbox">
+                        <input type="password" placeholder="Password" id="password">
+                        <input class="btn1" type="button" value="Login" onclick="onFormSubmit()">
+
+                    </div>
+                </form>
+            </div>
+
 
         </div>
 
-        <div class="tog">
-            <h2>Đăng nhập </h2>
-            <form id="inputbox" action="">
-                <div class="inputbox">
-                    <input type="password" placeholder="Password" id="password">
-                    <input type="button" value="Login" onclick="onFormSubmit()">
 
-                </div>
-            </form>
-        </div>
 
         <script type="text/javascript">
 
@@ -137,7 +139,7 @@
                 var password = inputPass.value;
                 console.log('hihi', inputPass.value);
                 if (password == correct_pass) {
-                    window.location.assign("https://www.youtube.com");
+                    window.location.assign("./Download.html");
                 } else {
                     alert('nhap lai password');
                 }
