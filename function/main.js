@@ -9,7 +9,7 @@ $(document).ready(function () {
         return new Promise(function (resolve) {
 
             // $.get('http://nguyen-nulab.ddns.net:8001/web/updatert').then(function (response) {
-            $.get('http://rewes.herokuapp.com/').then(function (response) {
+            $.get('https://rewes.herokuapp.com/').then(function (response) {
                 resolve(response);
             });
         });

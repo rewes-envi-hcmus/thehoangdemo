@@ -19,7 +19,7 @@ function myTimer() {
     $(document).ready(function () {
 
         // $.getJSON('http://nguyen-nulab.ddns.net:8001/web/updatert', function (response) {
-        $.getJSON('http://rewes.herokuapp.com/', function (response) {
+        $.getJSON('https://rewes.herokuapp.com/', function (response) {
             var sensor1 = response.dose;
             var sensor1 = sensor1.toFixed(4);
             document.getElementById("sensor1").innerHTML = sensor1 + " mSv/h";
