@@ -1,9 +1,4 @@
-// main.js
-// Năm ngoái
-// 2 thg 8, 2019
 
-// Ngo Nhat Duy đã tải lên một mục
-// JavaScript
 // main.js
 
 //change chart
@@ -12,7 +7,9 @@ $(document).ready(function () {
     var dps = [], chart, temp;
     function getData() {
         return new Promise(function (resolve) {
-            $.get('http://nguyen-nulab.ddns.net:8001/web/updatert').then(function (response) {
+
+            // $.get('http://nguyen-nulab.ddns.net:8001/web/updatert').then(function (response) {
+            $.get('https://envi-hcmus.herokuapp.com/mongodb').then(function (response) {
                 resolve(response);
             });
         });
