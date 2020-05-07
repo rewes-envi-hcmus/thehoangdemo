@@ -1,3 +1,7 @@
+html {
+    font-size: 10px;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -6,10 +10,13 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "header header header header""main main main main";
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: auto;
 }
 
 .header {
     grid-area: header;
+    height: 80px;
+    width: auto;
     display: grid;
     grid-template-rows: auto;
     background: rgb(68, 68, 75);
@@ -23,6 +30,7 @@ body {
     align-items: center;
     text-align: center;
     margin: auto;
+
 }
 
 .logo2 {
@@ -37,21 +45,29 @@ body {
 .noidung {
     grid-area: noidung;
     text-align: center;
-    font-size: 30px;
+    /* font-size: 30px; */
     line-height: 80px;
     padding: 0;
     color: #fff;
+    margin: 0;
+}
+
+.noidung h2 {
+    margin: 0;
+    padding: 0;
+    line-height: 80px;
 }
 
 .main {
     margin-top: 15px;
     display: grid;
     grid-area: main;
-    grid-template-rows: 500px;
+    grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "hienthi bieudo";
 
     grid-column-gap: 15px;
+    height: auto;
 }
 
 .card1 {
@@ -85,6 +101,7 @@ body {
 .main .hienthi {
     background: rgb(15, 15, 15);
     grid-area: hienthi;
+    height: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "thoigian thoigian thoigian""suatlieu nhietdo doam""bui co ch4";
@@ -147,8 +164,105 @@ body {
 }
 
 #chart1 {
-    margin: 30px auto;
-    height: 300px;
+    margin: 3rem auto;
+    height: 30rem;
     width: 90%;
 
 }
+
+/* responsive  */
+
+
+
+@media only screen and (max-width: 1200px) {
+    .main {
+        margin-top: 15px;
+        display: grid;
+        grid-area: main;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: "hienthi""bieudo";
+
+        grid-column-gap: 15px;
+    }
+
+    .main .hienthi {
+        background: rgb(15, 15, 15);
+        grid-area: hienthi;
+        display: grid;
+        height: auto;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "thoigian thoigian ""suatlieu nhietdo""doam bui""co ch4";
+    }
+
+    .noidung h2 {
+        font-size: 27px;
+    }
+
+    @media only screen and (max-width: 1100px) {
+    .noidung h2 {
+        font-size: 20px;
+    }
+}
+
+
+
+
+    @media only screen and (max-width: 768px) {
+        .header {
+            grid-area: header;
+            width: auto;
+            display: grid;
+            grid-template-rows: auto;
+            background: rgb(68, 68, 75);
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas: "logo1 noidung noidung noidung";
+        }
+
+        .logo2 {
+            display: none;
+        }
+
+        .logo1 img {
+            width: 75%;
+            /* height: 80%; */
+            align-items: center;
+            text-align: center;
+            margin: auto;
+        }
+
+        .main .hienthi .card {
+            height: auto;
+        }
+    }
+
+
+
+    @media only screen and (max-width: 550px) {
+
+        .noidung h2 {
+            font-size: 13px;
+        }
+
+        .main .hienthi {
+            background: rgb(15, 15, 15);
+            grid-area: hienthi;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "thoigian thoigian ""suatlieu nhietdo""doam bui""co ch4";
+        }
+
+        #chart1 {
+            margin: 3rem auto;
+            height: 23rem;
+            width: 90%;
+        }
+    }
+
+    @media only screen and (max-width: 380px) {
+        .noidung h2 {
+            font-size: 10px;
+        }
+    }

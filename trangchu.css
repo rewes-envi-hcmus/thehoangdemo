@@ -6,8 +6,8 @@ body {
 .slidebar {
     position: fixed;
     top: 0;
-    left: -30%;
-    width: 30%;
+    left: -40%;
+    width: 40%;
     height: 100%;
     background: rgba(0, 0, 0, 0.95);
     transition: 0.5s;
@@ -145,4 +145,144 @@ form .inputbox input[value="Login"] {
     color: #000;
     margin: 20px 0 0 90px;
     padding: 10px;
+}
+
+/* responsive */
+
+/* @media only screen and (max-width: 1100px) {
+    .slidebar ul li a {
+
+        font-size: 30px;
+
+    }
+
+    .slidebar .tog {
+        font-size: 15px;
+        padding: 50px 0 0 30px;
+        width: 250px;
+    }
+
+    .tog h2 {
+        margin: 0px 0px 0 30px;
+        padding: 0;
+    }
+
+    form .inputbox input[value="Login"] {
+
+        margin: 20px 0 0 50px;
+
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .slidebar ul li a {
+        font-size: 25px;
+    }
+
+    .slidebar .tog {
+        font-size: 12px;
+        padding: 50px 0 0 20px;
+        width: 210px;
+    }
+
+    .tog h2 {
+        margin: 0px 0px 0 30px;
+        padding: 0;
+    }
+
+    form .inputbox input[value="Login"] {
+
+        margin: 20px 0 0 50px;
+
+    }
+} */
+
+@media only screen and (max-width: 1100px) {
+    .slidebar {
+
+        left: -50%;
+        width: 50%;
+
+    }
+
+
+
+}
+
+
+@media only screen and (max-width: 730px) {
+    .slidebar {
+
+        left: -50%;
+        width: 50%;
+    }
+
+    .slidebar ul li a {
+        font-size: 25px;
+    }
+
+    .slidebar .tog {
+        font-size: 12px;
+        padding: 50px 0 0 20px;
+        width: 210px;
+    }
+
+    .tog h2 {
+        margin: 0px 0px 0 30px;
+        padding: 0;
+    }
+
+    form .inputbox input[value="Login"] {
+
+        margin: 20px 0 0 50px;
+
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .slidebar {
+
+        left: -70%;
+        width: 70%;
+    }
+
+    .slidebar ul li a {
+        font-size: 37px;
+    }
+
+    .slidebar .tog {
+        font-size: 20px;
+        padding: 50px 0 0 50px;
+        width: 270px;
+    }
+
+    .tog h2 {
+        margin: 0px 0px 0 30px;
+        padding: 0;
+    }
+
+    form .inputbox input[value="Login"] {
+
+        margin: 20px 0 0 50px;
+    }
+}
+
+@media only screen and (max-width: 444px) {
+    .slidebar {
+
+        left: -85%;
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .slidebar {
+
+        left: -85%;
+        width: 85%;
+    }
+
+    .slidebar ul li a {
+        font-size: 28px;
+    }
 }
