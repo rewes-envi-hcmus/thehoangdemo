@@ -199,8 +199,9 @@ body {
     .noidung h2 {
         font-size: 27px;
     }
+}
 
-    @media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1100px) {
     .noidung h2 {
         font-size: 20px;
     }
@@ -209,60 +210,60 @@ body {
 
 
 
-    @media only screen and (max-width: 768px) {
-        .header {
-            grid-area: header;
-            width: auto;
-            display: grid;
-            grid-template-rows: auto;
-            background: rgb(68, 68, 75);
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-areas: "logo1 noidung noidung noidung";
-        }
-
-        .logo2 {
-            display: none;
-        }
-
-        .logo1 img {
-            width: 75%;
-            /* height: 80%; */
-            align-items: center;
-            text-align: center;
-            margin: auto;
-        }
-
-        .main .hienthi .card {
-            height: auto;
-        }
+@media only screen and (max-width: 768px) {
+    .header {
+        grid-area: header;
+        width: auto;
+        display: grid;
+        grid-template-rows: auto;
+        background: rgb(68, 68, 75);
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "logo1 noidung noidung noidung";
     }
 
-
-
-    @media only screen and (max-width: 550px) {
-
-        .noidung h2 {
-            font-size: 13px;
-        }
-
-        .main .hienthi {
-            background: rgb(15, 15, 15);
-            grid-area: hienthi;
-            display: grid;
-            grid-template-rows: auto;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: "thoigian thoigian ""suatlieu nhietdo""doam bui""co ch4";
-        }
-
-        #chart1 {
-            margin: 3rem auto;
-            height: 23rem;
-            width: 90%;
-        }
+    .logo2 {
+        display: none;
     }
 
-    @media only screen and (max-width: 380px) {
-        .noidung h2 {
-            font-size: 10px;
-        }
+    .logo1 img {
+        width: 75%;
+        /* height: 80%; */
+        align-items: center;
+        text-align: center;
+        margin: auto;
     }
+
+    .main .hienthi .card {
+        height: auto;
+    }
+}
+
+
+
+@media only screen and (max-width: 550px) {
+
+    .noidung h2 {
+        font-size: 13px;
+    }
+
+    .main .hienthi {
+        background: rgb(15, 15, 15);
+        grid-area: hienthi;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "thoigian thoigian ""suatlieu nhietdo""doam bui""co ch4";
+    }
+
+    #chart1 {
+        margin: 3rem auto;
+        height: 23rem;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .noidung h2 {
+        font-size: 10px;
+    }
+}
