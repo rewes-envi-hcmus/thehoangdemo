@@ -1,187 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<style>
+  <style>
     body {
-        padding: 0;
-        margin: 0;
-        background: url(./image/1.png);
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas: "header header header header""main main main main";
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      padding: 0;
+      margin: 0;
+      background: url(./image/1.png);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "header header header header" "main main main main";
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
     #getReport {
-
-        background-color: #4CAF50;
-        border: none;
-        position: absolute;
-        width: 300px;
-        height: 80px;
-        color: white;
-        padding: 0;
-        margin: 0;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 30px;
-        top: 270px;
-        left: 530px;
-        cursor: pointer;
-        transition-duration: 0.4s;
-        border-radius: 5px;
+      background-color: #4caf50;
+      border: none;
+      position: absolute;
+      width: 300px;
+      height: 80px;
+      color: white;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 30px;
+      top: 270px;
+      left: 530px;
+      cursor: pointer;
+      transition-duration: 0.4s;
+      border-radius: 5px;
     }
 
     #getReport:hover {
-        box-shadow: 0 10px 10px 0 rgba(252, 252, 252, 0.5), 0 17px 10px 0 rgba(255, 255, 255, 0.19);
+      box-shadow: 0 10px 10px 0 rgba(252, 252, 252, 0.5),
+        0 17px 10px 0 rgba(255, 255, 255, 0.19);
     }
 
     .header {
-        grid-area: header;
-        display: grid;
-        grid-template-rows: auto;
-        background: rgb(68, 68, 75);
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas: "logo1 noidung noidung noidung logo2";
+      grid-area: header;
+      display: grid;
+      grid-template-rows: auto;
+      background: rgb(68, 68, 75);
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: "logo1 noidung noidung noidung logo2";
     }
 
     .logo1 {
-        grid-area: logo1;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        margin: auto;
+      grid-area: logo1;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: auto;
     }
 
     .logo2 {
-        /* background: lime; */
-        grid-area: logo2;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        margin: auto;
+      /* background: lime; */
+      grid-area: logo2;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      margin: auto;
     }
 
     .noidung {
-        grid-area: noidung;
-        text-align: center;
-        font-size: 30px;
-        line-height: 80px;
-        padding: 0;
-        color: #fff;
+      grid-area: noidung;
+      text-align: center;
+      font-size: 30px;
+      line-height: 80px;
+      padding: 0;
+      color: #fff;
     }
 
     .text {
-        color: cornsilk;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        text-align: center;
-        align-items: center;
-        position: absolute;
-        justify-content: center;
-        top: 200px;
-        left: 350px;
-        font-size: 20px;
+      color: cornsilk;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      text-align: center;
+      align-items: center;
+      position: absolute;
+      justify-content: center;
+      top: 200px;
+      left: 350px;
+      font-size: 20px;
     }
-</style>
+  </style>
 
-<body>
+  <body>
     <div class="header">
-        <div class="logo1">
-            <img src="./image/logoDuAn.png" sizes="80px">
-        </div>
-        <div class="noidung">QUAN TRẮC MÔI TRƯỜNG THEO THỜI GIAN THỰC</div>
-        <div class="logo2">
-            <img src="./image/logoTruong.png">
-            <img src="">
-
-        </div>
+      <div class="logo1">
+        <img src="./image/logoDuAn.png" sizes="80px" />
+      </div>
+      <div class="noidung">QUAN TRẮC MÔI TRƯỜNG THEO THỜI GIAN THỰC</div>
+      <div class="logo2">
+        <img src="./image/logoTruong.png" />
+        <img src="" />
+      </div>
     </div>
-
-
 
     <div>
-        <div class="text">Nhấn vào Download để tải dữ liệu thông số môi trường tại Bộ Môn</div>
-        <button id="getReport">Download</button>
+      <div class="text">
+        Nhấn vào Download để tải dữ liệu thông số môi trường tại Bộ Môn
+      </div>
+      <button id="getReport">Download</button>
     </div>
 
-
     <script>
-        const objectToCsv = function (data) {
+      const objectToCsv = function (data) {
+        const csvRows = [];
+        //get the headers
+        const headers = Object.keys(data[0]);
+        csvRows.push(headers.join(","));
 
-            const csvRows = [];
-            //get the headers
-            const headers = Object.keys(data[0]);
-            csvRows.push(headers.join(','));
+        //loop over the rows
+        for (const row of data) {
+          const values = headers.map((header) => {
+            const val = row[header];
+            const escaped = ("" + row[header]).replace(/"/g, '\\"');
+            return `"${escaped}"`;
+          });
+          csvRows.push(values.join(","));
+        }
 
-            //loop over the rows
-            for (const row of data) {
-                const values = headers.map(header => {
-                    const val = row[header];
-                    const escaped = ('' + row[header]).replace(/"/g, '\\"');
-                    return `"${escaped}"`;
+        // form escaped comma separated values
+        return csvRows.join("\n");
+      };
+      const download = function (data) {
+        const blob = new Blob([data], {
+          type: "text/csv",
+        });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.setAttribute("hidden", "");
+        a.setAttribute("href", url);
+        a.setAttribute("download", "download.csv");
+        a.click();
+      };
+      const getReport = async function () {
+        alert("Click ok to download");
+        // const jsonUrl = 'http://nguyen-nulab.ddns.net:8001/web/updatert';
+        // const jsonUrl = 'https://rewes.herokuapp.com/';
 
-                });
-                csvRows.push(values.join(','));
-            }
+        const jsonUrl = "http://dummy-data-rewes.herokuapp.com/";
 
-            // form escaped comma separated values
-            return csvRows.join('\n');
+        const res = await fetch(jsonUrl);
+        // console.log(res);
+        const json = [];
+        json.push(await res.json());
 
+        const data = json.map((row) => ({
+          suatlieu: row.dose,
+          Hu: row.Hu,
+          Te: row.Te,
+          sen1: row.sen1,
+          sen2: row.sen2,
+          sen3: row.sen3,
+        }));
 
-        };
-        const download = function (data) {
-            const blob = new Blob([data], {
-                type: 'text/csv'
-            });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement("a");
-            a.setAttribute('hidden', '');
-            a.setAttribute('href', url);
-            a.setAttribute('download', 'download.csv');
-            a.click();
-        };
-        const getReport = async function () {
-            alert('Click ok to download');
-            // const jsonUrl = 'http://nguyen-nulab.ddns.net:8001/web/updatert';
-            const jsonUrl = 'https://rewes.herokuapp.com/';
+        const csvData = objectToCsv(data);
+        download(csvData);
+      };
 
-            const res = await fetch(jsonUrl);
-            // console.log(res);
-            const json = [];
-            json.push(await res.json());
-
-            const data = json.map(row => ({
-                suatlieu: row.dose,
-                Hu: row.Hu,
-                Te: row.Te,
-                sen1: row.sen1,
-                sen2: row.sen2,
-                sen3: row.sen3
-            }));
-
-            const csvData = objectToCsv(data);
-            download(csvData);
-
-
-
-
-        };
-
-
-        // main app
-        window.onload = function () {
-            // button click
-            const button = document.getElementById('getReport');
-            button.addEventListener('click', getReport);
-        };
+      // main app
+      window.onload = function () {
+        // button click
+        const button = document.getElementById("getReport");
+        button.addEventListener("click", getReport);
+      };
     </script>
-</body>
-
+  </body>
 </html>

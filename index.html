@@ -74,7 +74,7 @@
             </div>
             <div class="card ch4">
                 <div class="ch41">
-                    <div class="text">Khí CH4</div>
+                    <div class="text">KHÍ CH4</div>
                     <div id="ch44"></div>
                 </div>
             </div>
@@ -95,28 +95,29 @@
         <!-- thanh menu -------------------------------------------------------->
 
         <div class="slidebar" id="slidebar">
-            <div class="scroll">
-                <div class="toggle" onclick="toggle_div()"></div>
-                <ul>
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Thông tin</a></li>
-                    <li><a href="#">Giới thiệu</a></li>
-                    <li><a href="#">Liên hệ</a></li>
-                    <li><a href="#">Điều khiển</a></li>
-                </ul>
+            <!-- <div class="scroll"> -->
+            <div class="toggle" onclick="toggle_div()"></div>
+            <div class="tog">
+                <h2>Đăng nhập </h2>
+                <form id="inputbox" action="">
+                    <div class="inputbox">
+                        <input type="password" placeholder="Password" id="password">
+                        <input class="btn1" type="button" value="Login" onclick="onFormSubmit()">
 
-                <div class="tog">
-                    <h2>Đăng nhập </h2>
-                    <form id="inputbox" action="">
-                        <div class="inputbox">
-                            <input type="password" placeholder="Password" id="password">
-                            <input class="btn1" type="button" value="Login" onclick="onFormSubmit()">
-
-                        </div>
-                    </form>
-                </div>
-
+                    </div>
+                </form>
             </div>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Thông tin</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Điều khiển</a></li>
+            </ul>
+
+
+
+            <!-- </div> -->
         </div>
 
 

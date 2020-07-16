@@ -6,8 +6,8 @@ body {
 .slidebar {
     position: fixed;
     top: 0;
-    left: -40%;
-    width: 40%;
+    left: -30%;
+    width: 30%;
     height: 100%;
     background: rgba(0, 0, 0, 0.95);
     transition: 0.5s;
@@ -16,10 +16,11 @@ body {
 }
 
 .slidebar .scroll {
+    position: absolute;
     margin: 0;
     padding: 0;
-    /* height 800px; */
-    /* overflow: scroll; */
+    height: 800px;
+    overflow: scroll;
 }
 
 .slidebar.active {
@@ -91,7 +92,7 @@ body {
     position: relative;
     display: inline-block;
     color: #fff;
-    font-size: 20px;
+    font-size: 15px;
     text-decoration: none;
     z-index: 2;
     transition: 0.5s;
@@ -153,6 +154,13 @@ form .inputbox input[value="Login"] {
     color: #000;
     margin: 20px 0 0 90px;
     padding: 10px;
+}
+
+.slidebar .tog {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 15px;
 }
 
 /* responsive */
@@ -231,8 +239,8 @@ form .inputbox input[value="Login"] {
 
     .slidebar .tog {
         font-size: 12px;
-        padding: 50px 0 0 20px;
-        width: 210px;
+        padding: 50px 0 0 50px;
+        width: 250px;
     }
 
     .tog h2 {
