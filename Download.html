@@ -76,12 +76,12 @@
         json.push(await res.json());
 
         const data = json.map((row) => ({
-          suatlieu: row.dose,
-          Hu: row.Hu,
-          Te: row.Te,
-          sen1: row.sen1,
-          sen2: row.sen2,
-          sen3: row.sen3,
+          "Dose (uSv/h)": row.dose,
+          "Humidity (%)": row.Hu,
+          Temperature: row.Te,
+          "CO (ppm)": row.sen1,
+          "CH4 (ppm)": row.sen2,
+          "Dust (ug/m3)": row.sen3,
         }));
 
         const csvData = objectToCsv(data);
