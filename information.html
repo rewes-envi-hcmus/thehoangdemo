@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông tin dự án</title>
+    <link rel="stylesheet" href="trangchu.css" />
+    <link rel="stylesheet" href="public.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="./function/canvasjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="./function/function.js"></script>
+    <script src="./function/main.js"></script>
+</head>
+<style>
+    body {
+        color: aliceblue;
+        padding: 0;
+        margin: 0;
+        /* background: url(./image/1.png); */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "header header header header""main main main main";
+        font-family: Arial, Helvetica, sans-serif ;
+        height: auto;
+        width: 100%;
+    }
+
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: "abo";
+    }
+
+    .inf {
+
+        color: cornsilk;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        align-items: center;
+        font-size: 15px;
+        width: auto;
+        height: auto;
+        margin: 15px 20px 0 52px;
+    }
+    @media only screen and (max-width: 671px) {
+        .textt {
+            font-size: 12px;
+        }
+        .inf {
+        margin: 0px 20px 0 52px;
+        }
+        }
+            
+
+    
+</style>
+
+<body>
+
+    <div class="header">
+        <div class="logo1">
+            <img src="./image/logoDuAn.png" sizes="80px">
+        </div>
+        <div class="noidung">
+            <h2>QUAN TRẮC MÔI TRƯỜNG THEO THỜI GIAN THỰC</h2>
+        </div>
+        <div class="logo2">
+            <img src="./image/logoTruong.png">
+            <img src="">
+
+        </div>
+    </div>
+
+
+    <div class="slidebar" id="slidebar">
+        <!-- <div class="scroll"> -->
+        <div class="toggle" onclick="toggle_div()"></div>
+        <div class="tog">
+            <h2>Đăng nhập</h2>
+            <form id="inputbox" action="">
+                <div class="inputbox">
+                    <input type="password" placeholder="Password" id="password" />
+                    <input class="btn1" type="button" value="Login" onclick="onFormSubmit()" />
+                </div>
+            </form>
+        </div>
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="information.html">Thông tin</a></li>
+            <li><a href="about.html">Giới thiệu</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+    </div>
+
+
+
+    <div class="main">
+        <div class="inf">
+             
+                <h2>Phóng xạ môi trường</h2>
+                <div class="textt">
+                    <b>Phóng xạ môi trường</b> tồn tại xung quanh chúng ta mọi lúc, mọi nơi. Kể từ khi trái đất được hình thành
+                    và phát triển sự sống, mọi cá thể sống trên trái đất đều tiếp xúc với bức xạ ion hóa. Chúng ta vẫn thường
+                    phải chịu sự chiếu xạ của các bức xạ tụ nhiên từ trái đất cũng như ngoài trái đất, đồng thời cũng bị chiếu
+                    bởi các phóng xạ nhân tạo như các bức xạ sử dụng trong y học, các chất phóng xạ từ công nghiệp. <br />
+                    Phóng xạ môi trường gồm có <b>Phóng xạ từ tự nhiên, phóng xạ nhân tạo,</b> và <b>bức xạ vũ trụ</b>.<br />
+                    <b>Phóng xạ tự nhiên</b> có mặt ở khắp nơi trong môi trường, nó là một bộ phận của trái đất chúng ta; có
+                    trong không khí, đất đá, thực phẩm và ngay chính trong cơ thể con người (như K-40).<br>
+                    <b>Phóng xạ nhân tạo</b> có từ chiếu xạ trong y học, trong công nghiệp chiếu xạ, nhà máy điện hạt nhân, các
+                    vụ thử bom hạt nhân.<br>
+                </div>
+                        
+                        
+                                        
+                        <div style="text-align: center">
+                            <img src="./image/phongxa.jpg" style="max-width: 80%">
+                        </div>
+                        <div class="textt" style="justify-content: center;  display: flex;">
+                            Hình 1: Biểu đồ tỷ lệ đóng góp của phóng xạ môi trường lên cơ thể người.<br>
+                        </div>
+                        <div>
+                            Giới hạn liều hấp thụ lên cơ thể con người (ICRP-1991)
+                        </div>
+                        <div style="text-align: center">
+                            <img src="./image/bang.png" style="max-width: 90%">
+                        </div>
+                        <div class="textt">
+                            Ủy ban Quốc tế về An toàn bức xạ ICRP (International Commission on Radiological Protection) đã khuyến nghị
+                            rằng mọi tiếp xúc với bức xạ vượt quá giới hạn phông bình thường phải được giữ thấp ở mức hợp lý có thể đạt
+                            được, và phải dưới giới hạn liều cá nhân.<br>
+                            Đối với công chúng: Giới hạn liều đối với công chúng nói chung thấp hơn đối với nhân viên bức xạ. ICRP
+                            khuyến cáo rằng giới hạn liều đối với nhân viên bức xạ không nên vượt quá 1 mSv/1 năm.<br>
+                            Đối với nhân viên bức xạ: theo khuyến cáo của ICRP, thì mức liều đối với nhân viên bức xạ không nên vượt quá
+                            50 mSv/năm và liều trung bình cho 5 năm không được vượt quá 20 mSv. Nếu một phụ nữ mang thai làm việc trong
+                            điều kiện bức xạ, thì giới hạn liều nghiêm ngặt hơn cần được áp dụng là 2 mSv. Giới hạn liều được chọn để
+                            bảo đảm rằng, rủi ro nghề nghiệp đối với nhân viên bức xạ không cao hơn rủi ro nghề nghiệp trong các ngành
+                            công nghiệp khác được xem là an toàn nói chung.<br>
+                            Đối với bệnh nhân: ICRP không có khuyến cáo giới hạn liều đối với bệnh nhân. Ở nhiều cuộc chụp X quang, bệnh
+                            nhân phải chiếu liều cao hơn nhiều lần so với giới hạn liều cho công chúng. Trong xạ trị, liều chiếu có thể
+                            tăng gấp hàng trăm lần so với giới hạn liều đối với nhân viên bức xạ. Bởi vì liều xạ trị được dùng là để xác
+                            định bệnh và để chữa bệnh, nên hiệu quả của điều trị được xem là cần thiết hơn ngay cả khi phải dùng đến
+                            liều cao.<br>
+                        </div>
+                        
+                        <h2>Nhiệt độ - độ ẩm</h2>
+                        <div class="textt">
+                            Không khí ẩm chứa nhiều hơi ẩm hơn không khí lạnh, nhưng con người không thể cảm nhân được độ ẩm tuyệt đối,
+                            họ cảm nhận độ ẩm tương đối, được tính là phần trăm hơi nước trong không khí.<br>
+                            Con người thường cho rằng độ ẩm tương đối 40-55% là tiện nghi. Dưới 40% sẽ cảm nhận là hanh khô, trên 55% sẽ
+                            cảm nhận là oi bức và ẩm ướt. Giống như nhiệt độ, độ ẩm cũng thay đổi liên tục trong ngày và quanh năm, và
+                            tùy vào vùng địa lý khác nhau độ ẩm không khí cũng khác nhau. Hình sau trình bày diều kiện không khí ảnh
+                            hưởng đến thích nghi của con người.<br>
+                        </div>
+                        <div style="text-align: center">
+                            <img src="./image/humidity1.PNG" style="width: 80%">
+                        </div>
+                        <h2>Khí CO</h2>
+                        <div class="textt">
+                            Carbon monoxit CO là khí không mùi vị, có độc tính cao với sức khỏe con người và cực kỳ nguy hiểm. Việc hít
+                            thở phải một lượng quá lớn CO sẽ dẫn tới thương tổn do giảm ôxy trong máu hay tổn thương hệ thần kinh cũng
+                            như có thể gây tử vong. Nồng độ chỉ khoảng 0,1% carbon monoxit trong không khí cũng có thể là nguy hiểm đến
+                            tính mạng. Vì CO là chất khí không màu, không mùi, không gây kích ứng nên con người không cảm nhận được sự
+                            hiện diện của CO trong không khí, dẫn đến CO rất nguy hiểm đối với con người.<br>
+                            Khí CO có trong khói đốt nhiên liệu như xe gắn máy, xe hơi, động cơ nhỏ, bếp lò, vỉ nướng, lò sưởi,… Khí CO
+                            có thể tích tụ trong nhà dẫn đến ngộ độc đến con người hít phải.<br>
+
+                        </div>
+                        
+                        
+                        
+            
+                        
+                        <div style="text-align: center">
+                            <img src="./image/bang2.png" style="max-width: 80%">
+                        </div>
+                        <div class="caption" style="margin: 20px 0 40px 0; justify-content: center;  display: flex;">Triệu chứng nhiễm độc của người khi tiếp xúc với CO ở các nồng độ khác nhau</div>
+                        <div style="text-align: center">
+                            <img src="./image/CO.png" style="width: 80%">
+                        </div>
+                        <h2>Khí CH4</h2>
+                        <div style="text-align: center">
+                            <img src="./image/CH4.png" style="width: 80%">
+                        </div>
+                        <div class="textt">
+                            Metan (CH4) là một loại khí gây hiệu ứng nhà kính, cùng với CO và CO2. Nó được sinh ra từ khai thác nhiên
+                            liệu hóa thạch, từ rác thải-nông nghiệp, từ cháy rừng, từ sự phân giải kỵ khí ở đất ngập nước, ruộng lúa….
+                            Hình trên minh họa nguồn gốc khí CH4 tạo ra.<br>
+                            CH4 thúc đẩy sự oxy hóa hơi nước ở tầng bình lưu. Sự gia tăng hơi nước gây hiệu ứng nhà kính mạnh hơn nhiều
+                            so với hiệu ứng trực tiếp của CH4.<br>
+                            Ở mật độ bình thường trong môi trường, metan không ảnh hưởng đến sức khỏe con người. Ở mật độ cực cao trong
+                            môi trường kín thì sự giảm mật độ oxy có thể dẫn đến ngạt thở.<br>
+
+                        </div>
+                        
+                    </div>
+
+        </div>
+    </div>
+    
+
+
+
+    </script>
+    <script type="text/javascript">
+        function toggle_div() {
+            var element = document.getElementById('slidebar');
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

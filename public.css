@@ -243,7 +243,7 @@ body {
 @media only screen and (max-width: 550px) {
 
     .noidung h2 {
-        font-size: 13px;
+        font-size: 11px;
     }
 
     .main .hienthi {
@@ -264,6 +264,6 @@ body {
 
 @media only screen and (max-width: 380px) {
     .noidung h2 {
-        font-size: 10px;
+        font-size: 9px;
     }
 }

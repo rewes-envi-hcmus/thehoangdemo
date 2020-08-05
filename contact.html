@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên hệ</title>
+    <link rel="stylesheet" href="trangchu.css" />
+    <link rel="stylesheet" href="public.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="./function/canvasjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="./function/function.js"></script>
+    <script src="./function/main.js"></script>
+  </head>
+  <style>
+      body{
+          color: aliceblue;
+          padding: 0;
+            margin: 0;
+            /* background: url(./image/1.png); */
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas: "header header header header""main main main main";
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            height: auto;
+        }
+        .main{
+            grid-area: main;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 1fr;
+            grid-template-areas: "cont";
+        }
+        .cont{
+    
+            color: cornsilk;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 20px;
+            width: auto;
+            display: flex;
+            height: auto;
+        }
+        .cont h2 {
+            font-size: 40px;
+            margin: 20px 0 40px 0;
+        }
+        .cont address{
+            font-size: 24px;
+        }
+        @media only screen and (max-width: 411px) {
+            .cont address{
+            font-size: 17px;
+        }
+    }
+  </style>
+  
+  <body>
+
+    <div class="header">
+        <div class="logo1">
+            <img src="./image/logoDuAn.png" sizes="80px">
+        </div>
+        <div class="noidung">
+            <h2>QUAN TRẮC MÔI TRƯỜNG THEO THỜI GIAN THỰC</h2>
+        </div>
+        <div class="logo2">
+            <img src="./image/logoTruong.png">
+            <img src="">
+    
+        </div>
+    </div>
+
+
+    <div class="slidebar" id="slidebar">
+      <!-- <div class="scroll"> -->
+      <div class="toggle" onclick="toggle_div()"></div>
+      <div class="tog">
+        <h2>Đăng nhập</h2>
+        <form id="inputbox" action="">
+          <div class="inputbox">
+            <input type="password" placeholder="Password" id="password" />
+            <input
+              class="btn1"
+              type="button"
+              value="Login"
+              onclick="onFormSubmit()"
+            />
+          </div>
+        </form>
+      </div>
+      <ul>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="information.html">Thông tin</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+    </div>
+    <div class="main">
+        <div class="cont">
+            <address>
+                <h2>Liên hệ</h2>
+                <strong>TS. Võ Hồng Hải</strong><br />
+                <span class="span-name"><i>Chủ nhiệm dự án</i></span><br />
+                <span class="span-name">Bộ môn Vật lý Hạt nhân, Trường Đại học Khoa học Tự nhiên - ĐHQG TP. Hồ Chí
+                    Minh.</span><br />
+                <abbr>Email:</abbr> <a href="mailto:vhhai@hcmus.edu.vn">vhhai@hcmus.edu.vn</a>
+            </address>
+        
+        </div>
+    </div>
+    
+
+ 
+
+
+
+
+
+    
+    </script>
+    <script type="text/javascript">
+        function toggle_div() {
+            var element = document.getElementById('slidebar');
+            element.classList.toggle('active');
+        }
+    </script>
+  </body>
+</html>
