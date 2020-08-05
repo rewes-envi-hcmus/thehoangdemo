@@ -10,7 +10,7 @@ $(document).ready(function () {
   function getData() {
     return new Promise(function (resolve) {
       // $.get('http://nguyen-nulab.ddns.net:8001/web/updatert').then(function (response) {
-      // $.get('https://rewes.herokuapp.com/').then(function (response) {
+      // $.get("https://rewes.herokuapp.com/").then(function (response) {
       $.get("https://dummy-data-rewes.herokuapp.com/").then(function (
         response
       ) {
@@ -134,7 +134,7 @@ $(document).ready(function () {
     //     document.getElementById("static_sensor3").style.color = "white";
     // }
   }
-  drawChart("Dose Chart", "dose", "μSv/h");
+  drawChart("Suất liều", "dose", "μSv/h");
   $("#btn_phong_xa").click(function () {
     dps = [];
     active = "phong_xa";
@@ -144,31 +144,31 @@ $(document).ready(function () {
   $("#btn_nhiet_do").click(function () {
     dps = [];
     active = "nhiet_do";
-    drawChart("Temperature Chart", "temperature", "°C");
+    drawChart("Nhiệt độ", "temperature", "°C");
     changeActive("btn_nhiet_do");
   });
   $("#btn_do_am").click(function () {
     dps = [];
     active = "do_am";
-    drawChart("Humidity Chart", "humidity", "%");
+    drawChart("Độ ẩm", "humidity", "%");
     changeActive("btn_do_am");
   });
   $("#btn_khi_co2").click(function () {
     dps = [];
     active = "khi_co2";
-    drawChart("CO Chart", "co", "ppm");
+    drawChart("Khí CO", "CO", "ppm");
     changeActive("btn_khi_co2");
   });
   $("#btn_khi_ch4").click(function () {
     dps = [];
     active = "khi_ch4";
-    drawChart("CH4 Chart", "ch", "ppm");
+    drawChart("Khí CH4", "CH4", "ppm");
     changeActive("btn_khi_ch4");
   });
   $("#btn_sensor_3").click(function () {
     dps = [];
     active = "khi_ch4";
-    drawChart("Sensor 3", "sensor 3", "ppm");
+    drawChart("Bụi mịn", "Bụi mịn", "µg/m3");
     changeActive("btn_sensor_3");
   });
   // var socket = io.connect('http://localhost');
