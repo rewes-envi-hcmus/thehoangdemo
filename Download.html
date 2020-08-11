@@ -67,13 +67,15 @@
         alert("Click ok to download");
         // const jsonUrl = 'http://nguyen-nulab.ddns.net:8001/web/updatert';
         // const jsonUrl = 'https://rewes.herokuapp.com/';
-
-        const jsonUrl = "http://dummy-data-rewes.herokuapp.com/";
+        const jsonUrl = "https://envi-hcmus.herokuapp.com/mongodb";
+        // const jsonUrl = "http://dummy-data-rewes.herokuapp.com/";
 
         const res = await fetch(jsonUrl);
-        // console.log(res);
-        const json = [];
-        json.push(await res.json());
+        console.log(res);
+        var json = await res.json();
+        console.log(json);
+        // const json = [];
+        // json.push(await res.json());
 
         const data = json.map((row) => ({
           "Dose (uSv/h)": row.dose,
