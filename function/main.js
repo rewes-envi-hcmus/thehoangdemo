@@ -9,11 +9,16 @@ $(document).ready(function () {
 
   function getData() {
     return new Promise(function (resolve) {
-      // $.get('http://nguyen-nulab.ddns.net:8001/web/updatert').then(function (response) {
-      // $.get("https://rewes.herokuapp.com/").then(function (response) {
-      $.get("https://dummy-data-rewes.herokuapp.com/").then(function (
+      // $.get("https://dummy-data-rewes.herokuapp.com/").then(function (
+      //   response
+      // ) {
+      $.get("http://nguyen-nulab.ddns.net:8001/web/updatert").then(function (
         response
       ) {
+        // $.get(
+        //   "https://rewes.herokuapp.com/?fbclid=IwAR3cCq44_EE9ywMClvuSKhgpPUZr7J03E81ME0TKWZoHVOyXMxEgRY9keVY"
+        // ).then(function (response) {
+        // $.get("https://rewes.herokuapp.com/").then(function (response) {
         resolve(response);
       });
     });
@@ -97,42 +102,6 @@ $(document).ready(function () {
     $("#static_sensor1").text(sensor1);
     $("#static_sensor2").text(sensor2);
     $("#static_sensor3").text(sensor3);
-    // if (dose > 0.05) {
-    //     document.getElementById("static_dose").style.color = "red";
-    // }
-    // else {
-    //     document.getElementById("static_dose").style.color = "white";
-    // }
-    // if (temperature > 31) {
-    //     document.getElementById("static_temperature").style.color = "red";
-    // }
-    // else {
-    //     document.getElementById("static_temperature").style.color = "white";
-    // }
-    // if (humidity > 60) {
-    //     document.getElementById("static_humidity").style.color = "red";
-    // }
-    // else {
-    //     document.getElementById("static_humidity").style.color = "white";
-    // }
-    // if (sensor1 > 5) {
-    //     document.getElementById("static_sensor1").style.color = "red";
-    // }
-    // else {
-    //     document.getElementById("static_sensor1").style.color = "white";
-    // }
-    // if (sensor2 > 50) {
-    //     document.getElementById("static_sensor2").style.color = "red";
-    // }
-    // else {
-    //     document.getElementById("static_sensor2").style.color = "white";
-    // }
-    // if (sensor3 > 23.5) {
-    //     document.getElementById("static_sensor3").style.color = "red";
-    // }
-    // else {
-    //     document.getElementById("static_sensor3").style.color = "white";
-    // }
   }
   drawChart("Suất liều", "dose", "μSv/h");
   $("#btn_phong_xa").click(function () {
@@ -181,30 +150,30 @@ $(document).ready(function () {
       updateStatic(
         new Date(),
         response.dose.toFixed(4),
-        response.Te.toFixed(4),
-        response.Hu.toFixed(4),
-        response.sen1.toFixed(4),
-        response.sen2.toFixed(4),
-        response.sen3.toFixed(4)
+        response.temperature.toFixed(4),
+        response.humidity.toFixed(4),
+        response.CO.toFixed(4),
+        response.CH4.toFixed(4),
+        response.dust.toFixed(4)
       );
       switch (active) {
         case "phong_xa":
           updateChart(x, { label: label, value: response.dose });
           break;
         case "nhiet_do":
-          updateChart(x, { label: label, value: response.Te });
+          updateChart(x, { label: label, value: response.temperature });
           break;
         case "do_am":
-          updateChart(x, { label: label, value: response.Hu });
+          updateChart(x, { label: label, value: response.humidity });
           break;
         case "khi_co2":
-          updateChart(x, { label: label, value: response.sen1 });
+          updateChart(x, { label: label, value: response.CO });
           break;
         case "khi_ch4":
-          updateChartCH4(x, { label: label, value: response.sen2 });
+          updateChartCH4(x, { label: label, value: response.CH4 });
           break;
         case "sensor3":
-          updateChart(x, { label: label, value: response.sen3 });
+          updateChart(x, { label: label, value: response.dust });
           break;
       }
     });
