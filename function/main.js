@@ -1,3 +1,6 @@
+// main.js
+
+//change chart
 $(document).ready(function () {
   var active = "phong_xa";
   var dps = [],
@@ -6,11 +9,15 @@ $(document).ready(function () {
 
   function getData() {
     return new Promise(function (resolve) {
-      $.getJSON("http://nguyen-nulab.ddns.net:8001/web/updatert").then(
-        function (response) {
-          resolve(response);
-        }
-      );
+      $.get("http://nguyen-nulab.ddns.net:8001/web/updatert").then(function (
+        response
+      ) {
+        // $.get("https://rewes.herokuapp.com/").then(function (response) {
+        // $.get("https://dummy-data-rewes.herokuapp.com/").then(function (
+        //   response
+        // ) {
+        resolve(response);
+      });
     });
   }
 
@@ -92,6 +99,42 @@ $(document).ready(function () {
     $("#static_sensor1").text(sensor1);
     $("#static_sensor2").text(sensor2);
     $("#static_sensor3").text(sensor3);
+    // if (dose > 0.05) {
+    //     document.getElementById("static_dose").style.color = "red";
+    // }
+    // else {
+    //     document.getElementById("static_dose").style.color = "white";
+    // }
+    // if (temperature > 31) {
+    //     document.getElementById("static_temperature").style.color = "red";
+    // }
+    // else {
+    //     document.getElementById("static_temperature").style.color = "white";
+    // }
+    // if (humidity > 60) {
+    //     document.getElementById("static_humidity").style.color = "red";
+    // }
+    // else {
+    //     document.getElementById("static_humidity").style.color = "white";
+    // }
+    // if (sensor1 > 5) {
+    //     document.getElementById("static_sensor1").style.color = "red";
+    // }
+    // else {
+    //     document.getElementById("static_sensor1").style.color = "white";
+    // }
+    // if (sensor2 > 50) {
+    //     document.getElementById("static_sensor2").style.color = "red";
+    // }
+    // else {
+    //     document.getElementById("static_sensor2").style.color = "white";
+    // }
+    // if (sensor3 > 23.5) {
+    //     document.getElementById("static_sensor3").style.color = "red";
+    // }
+    // else {
+    //     document.getElementById("static_sensor3").style.color = "white";
+    // }
   }
   drawChart("Suất liều", "dose", "μSv/h");
   $("#btn_phong_xa").click(function () {
@@ -139,12 +182,12 @@ $(document).ready(function () {
       var label = new Date().toLocaleTimeString("vi-VN");
       updateStatic(
         new Date(),
-        response.dose.toFixed(3),
-        response.dust.toFixed(4),
+        response.dose.toFixed(4),
+        response.temperature.toFixed(4),
+        response.humidity.toFixed(4),
         response.CO.toFixed(4),
         response.CH4.toFixed(4),
-        response.temperature.toFixed(4),
-        response.humidity.toFixed(4)
+        response.dust.toFixed(4)
       );
       switch (active) {
         case "phong_xa":
