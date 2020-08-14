@@ -1,6 +1,3 @@
-// main.js
-
-//change chart
 $(document).ready(function () {
   var active = "phong_xa";
   var dps = [],
@@ -9,18 +6,11 @@ $(document).ready(function () {
 
   function getData() {
     return new Promise(function (resolve) {
-      // $.get("https://dummy-data-rewes.herokuapp.com/").then(function (
-      //   response
-      // ) {
-      $.get("http://nguyen-nulab.ddns.net:8001/web/updatert").then(function (
-        response
-      ) {
-        // $.get(
-        //   "https://rewes.herokuapp.com/?fbclid=IwAR3cCq44_EE9ywMClvuSKhgpPUZr7J03E81ME0TKWZoHVOyXMxEgRY9keVY"
-        // ).then(function (response) {
-        // $.get("https://rewes.herokuapp.com/").then(function (response) {
-        resolve(response);
-      });
+      $.getJSON("http://nguyen-nulab.ddns.net:8001/web/updatert").then(
+        function (response) {
+          resolve(response);
+        }
+      );
     });
   }
 
@@ -149,12 +139,12 @@ $(document).ready(function () {
       var label = new Date().toLocaleTimeString("vi-VN");
       updateStatic(
         new Date(),
-        response.dose.toFixed(4),
-        response.temperature.toFixed(4),
-        response.humidity.toFixed(4),
+        response.dose.toFixed(3),
+        response.dust.toFixed(4),
         response.CO.toFixed(4),
         response.CH4.toFixed(4),
-        response.dust.toFixed(4)
+        response.temperature.toFixed(4),
+        response.humidity.toFixed(4)
       );
       switch (active) {
         case "phong_xa":

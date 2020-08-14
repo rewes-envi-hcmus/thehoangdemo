@@ -16,8 +16,6 @@ var myVar = setInterval(myTimer, 1000);
 
 function myTimer() {
   $(document).ready(function () {
-    // $.getJSON("https://rewes.herokuapp.com/", function (response) {
-    // $.getJSON("https://dummy-data-rewes.herokuapp.com/", function (response) {
     $.getJSON("http://nguyen-nulab.ddns.net:8001/web/updatert", function (
       response
     ) {
