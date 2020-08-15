@@ -7,19 +7,19 @@ $(document).ready(function () {
     chart,
     temp;
 
-  function getData() {
-    return new Promise(function (resolve) {
-      $.get("http://nguyen-nulab.ddns.net:8001/web/updatert").then(function (
-        response
-      ) {
-        // $.get("https://rewes.herokuapp.com/").then(function (response) {
-        // $.get("https://dummy-data-rewes.herokuapp.com/").then(function (
-        //   response
-        // ) {
-        resolve(response);
-      });
-    });
-  }
+  // function getData() {
+  //   return new Promise(function (resolve) {
+  //     $.get("http://nguyen-nulab.ddns.net:8001/web/updatert").then(function (
+  //       response
+  //     ) {
+  //       // $.get("https://rewes.herokuapp.com/").then(function (response) {
+  //       // $.get("https://dummy-data-rewes.herokuapp.com/").then(function (
+  //       //   response
+  //       // ) {
+  //       resolve(response);
+  //     });
+  //   });
+  // }
 
   function changeActive(id) {
     $("#btn_phong_xa").removeClass("active");
@@ -99,43 +99,8 @@ $(document).ready(function () {
     $("#static_sensor1").text(sensor1);
     $("#static_sensor2").text(sensor2);
     $("#static_sensor3").text(sensor3);
-    // if (dose > 0.05) {
-    //     document.getElementById("static_dose").style.color = "red";
-    // }
-    // else {
-    //     document.getElementById("static_dose").style.color = "white";
-    // }
-    // if (temperature > 31) {
-    //     document.getElementById("static_temperature").style.color = "red";
-    // }
-    // else {
-    //     document.getElementById("static_temperature").style.color = "white";
-    // }
-    // if (humidity > 60) {
-    //     document.getElementById("static_humidity").style.color = "red";
-    // }
-    // else {
-    //     document.getElementById("static_humidity").style.color = "white";
-    // }
-    // if (sensor1 > 5) {
-    //     document.getElementById("static_sensor1").style.color = "red";
-    // }
-    // else {
-    //     document.getElementById("static_sensor1").style.color = "white";
-    // }
-    // if (sensor2 > 50) {
-    //     document.getElementById("static_sensor2").style.color = "red";
-    // }
-    // else {
-    //     document.getElementById("static_sensor2").style.color = "white";
-    // }
-    // if (sensor3 > 23.5) {
-    //     document.getElementById("static_sensor3").style.color = "red";
-    // }
-    // else {
-    //     document.getElementById("static_sensor3").style.color = "white";
-    // }
   }
+
   drawChart("Suất liều", "dose", "μSv/h");
   $("#btn_phong_xa").click(function () {
     dps = [];

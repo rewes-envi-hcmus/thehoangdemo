@@ -12,7 +12,7 @@ function getRealTime() {
 }
 setInterval("getRealTime()", 1000);
 
-var myVar = setInterval(myTimer, 1000);
+// var myVar = setInterval(myTimer, 1000);
 
 // function myTimer() {
 //   $(document).ready(function () {
@@ -49,47 +49,47 @@ var myVar = setInterval(myTimer, 1000);
 //   });
 // }
 
-let dose;
-let temperature;
-let humidity;
-let CO;
-let CH4;
-let dust;
+// let dose;
+// let temperature;
+// let humidity;
+// let CO;
+// let CH4;
+// let dust;
 
-var firebaseConfig = {
-  apiKey: "AIzaSyDSsikGKgjcjLxVwEuAyMRqfrQO4iOesD4",
-  authDomain: "thehoang-8d8ee.firebaseapp.com",
-  databaseURL: "https://thehoang-8d8ee.firebaseio.com",
-  projectId: "thehoang-8d8ee",
-  storageBucket: "thehoang-8d8ee.appspot.com",
-  messagingSenderId: "804235375577",
-  appId: "1:804235375577:web:1e81bd7926f2d1501e9fc8",
-  measurementId: "G-9MKD8B9SGX",
-};
+// var firebaseConfig = {
+//   apiKey: "AIzaSyDSsikGKgjcjLxVwEuAyMRqfrQO4iOesD4",
+//   authDomain: "thehoang-8d8ee.firebaseapp.com",
+//   databaseURL: "https://thehoang-8d8ee.firebaseio.com",
+//   projectId: "thehoang-8d8ee",
+//   storageBucket: "thehoang-8d8ee.appspot.com",
+//   messagingSenderId: "804235375577",
+//   appId: "1:804235375577:web:1e81bd7926f2d1501e9fc8",
+//   measurementId: "G-9MKD8B9SGX",
+// };
 
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-var fireBaseRef = new Firebase("https://thehoang-8d8ee.firebaseio.com");
+// firebase.initializeApp(firebaseConfig);
+// firebase.analytics();
+// var fireBaseRef = new Firebase("https://thehoang-8d8ee.firebaseio.com");
 
-const database = firebase.database();
+// const database = firebase.database();
 
-//   const userId = firebase.auth().currentUser.uid;
-getData();
-async function getData() {
-  const rs = await firebase
-    .database()
-    .ref()
-    .once("value")
-    .then((snaps) => {
-      sensor1 = snaps.val().dose;
-      document.getElementById("sensor1").innerHTML = sensor1;
+// //   const userId = firebase.auth().currentUser.uid;
+// getData();
+// async function getData() {
+//   const rs = await firebase
+//     .database()
+//     .ref()
+//     .once("value")
+//     .then((snaps) => {
+//       dose = snaps.val().dose;
+//       document.getElementById("sensor1").innerHTML = dose;
 
-      humidity = snaps.val().humidity;
-      document.getElementById("sensor3").innerHTML = humidity;
+//       humidity = snaps.val().humidity;
+//       document.getElementById("sensor3").innerHTML = humidity;
 
-      dose = snaps.val().dose;
-      document.getElementById("sensor1").innerHTML = dose;
-    });
-}
+//       dose = snaps.val().dose;
+//       document.getElementById("sensor1").innerHTML = dose;
+//     });
+// }
 
-setInterval("myTimer", 1000);
+// setInterval("myTimer", 1000);
